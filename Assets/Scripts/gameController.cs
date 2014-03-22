@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class gameController : MonoBehaviour {
+public class GameController : MonoBehaviour {
+
+	public Vector2 bounds {
+		get;
+		private set;
+	}
 
 	// Use this for initialization
 	void Start () {
 		BoxCollider2D bc = GetComponent<BoxCollider2D>(); 
-		Vector2 v2 = new Vector2 (Camera.main.orthographicSize * 3, 
-		                          Camera.main.orthographicSize * 3);
-		bc.size = v2;
+		bounds = new Vector2 (Camera.main.orthographicSize * 2 * Camera.main.aspect, 
+		                          Camera.main.orthographicSize * 2);
+
+		bc.size = bounds;
 	}
 	
 	// Update is called once per frame

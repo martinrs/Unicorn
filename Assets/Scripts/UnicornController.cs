@@ -6,11 +6,13 @@ public class UnicornController : MonoBehaviour {
 	private Direction direction;
 	public GameObject theStar;	
 	public int speed;
+	private Transform transformer{ get; set;}
 
 	private float xMax, xMin, yMax, yMin;
 
 	// Use this for initialization
 	void Start () {
+
 		direction = Direction.Right;
 		GameController gc = GameObject.FindWithTag ("GameController").GetComponent<GameController>();
 		xMax = gc.bounds.x/2;
@@ -35,6 +37,8 @@ public class UnicornController : MonoBehaviour {
 		}
 		this.rigidbody2D.velocity = makeVector ();
 
+
+		updateSprite ();
 		// Hold unicorn på skærmen
 		float resetX = Mathf.Clamp (this.transform.position.x, xMin, xMax);
 		float resetY = Mathf.Clamp (this.transform.position.y, yMin, yMax);
@@ -48,5 +52,15 @@ public class UnicornController : MonoBehaviour {
 
 	private Vector2 makeVector(){
 		return new Vector2((int)direction * speed, speed * Input.GetAxis ("Vertical"));
+	}
+
+	private void updateSprite(){
+		this.transformer = GetComponent<Transform>() ;
+		if(this.direction == Direction.Right){
+			this.transformer.localScale = new Vector3(1,1,1); 
+		}
+		if(this.direction == Direction.Left){
+			this.transformer.localScale = new Vector3(-1,1,1); 
+		}
 	}
 }

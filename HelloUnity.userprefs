@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnicornController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.cs">
     <Files>
-      <File FileName="Assets\Scripts\UnicornController.cs" Line="49" Column="1" />
+      <File FileName="Assets\Scripts\UnicornController.cs" Line="53" Column="1" />
       <File FileName="Assets\Scripts\StarController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UnicornController.cs" Line="15" Column="17" />
-      <File FileName="Assets\Scripts\gameController.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\UnicornController.cs" Line="53" Column="1" />
       <File FileName="Assets\Scripts\Direction.cs" Line="1" Column="1" />
-      <File FileName="..\Unity Tutorials\Space Shooter\Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="..\Unity Tutorials\Space Shooter\Assets\Scripts\PlayerController.cs" Line="22" Column="38" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="30" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

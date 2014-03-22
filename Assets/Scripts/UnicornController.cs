@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class UnicornController : MonoBehaviour {
-	
 	private Direction direction;
 	public GameObject theStar;	
 	public int speed;
@@ -12,7 +11,6 @@ public class UnicornController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		direction = Direction.Right;
 		GameController gc = GameObject.FindWithTag ("GameController").GetComponent<GameController>();
 		xMax = gc.bounds.x/2;
@@ -55,12 +53,15 @@ public class UnicornController : MonoBehaviour {
 	}
 
 	private void updateSprite(){
+
 		this.transformer = GetComponent<Transform>() ;
 		if(this.direction == Direction.Right){
-			this.transformer.localScale = new Vector3(1,1,1); 
+			this.transformer.localScale = new Vector3(1,1,1);
+			this.transformer.localRotation = Quaternion.Euler(0, 0, -35);
 		}
 		if(this.direction == Direction.Left){
 			this.transformer.localScale = new Vector3(-1,1,1); 
+			this.transformer.localRotation = Quaternion.Euler(0, 0, 35);
 		}
 	}
 }
